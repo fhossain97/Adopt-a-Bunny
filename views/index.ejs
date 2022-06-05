@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/style.css" rel="stylesheet">
+    <title>Product Page</title>
+  </head>
+  <body>
+    <h1>Products</h1>
+    <a href="/rabbits/new"><button>Add a new bunny</button></a>
+
+    <% allRabbits.forEach((el) => { %>
+      <a href="/rabbits/<%= el._id %>">
+        <div>
+          <td>
+              Name: <%= el.name%><br>
+          </td>
+
+      </div>
+</a>
+    <% }) %>
+  </body>
+</html>
