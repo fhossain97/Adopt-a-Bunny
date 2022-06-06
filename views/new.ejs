@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/style.css" rel="stylesheet">
-    <title>New Product</title>
+    <title>Add New Rabbit</title>
 </head>
 <body>
     <a href="/rabbits"><button>Go Back</button></a>
-    <h1>New Product</h1>
+    <h1>New Rabbit</h1>
     <form action="/rabbits" method="POST">
         Name: <input name="name" type="text"><br>
+        Img:<input name="img" type="text"><br>
+        Description: <input name="description" type="text"><br>
+        Age: <input name="age" type="text"><br>
+        Status: <input name="status" type="text"><br>
         <input type="submit" value="Create Rabbit!">
     </form>
 </body>
