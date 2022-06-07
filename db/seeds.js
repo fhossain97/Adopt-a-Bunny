@@ -6,41 +6,23 @@ const rabbitseeds = require('./seeds.json')
 
 Rabbit.deleteMany({})
 .then(()=> User.deleteMany({}))
-
-
-
-
-
-
 .then(() => {
-    return Rabbit.insertMany(rabbitseeds)
-})
-.then((rabbits) => {
-    console.log(rabbits)
-})
-.catch(console.error)
-.finally(() => {
-    process.exit()
-})
-
-
-
-.then(() => {
-    // then returns updates bookmarks with a owner: user._id
-    // first creates user, then maps over bookmarks and adds that id in 
-    return User.create({name: "billie", birthDay: '1-6'})
+    return User.create({name: ""})
     .then( user => {
-        return bookmarkseeds.map(bookmark => ({...bookmark, owner: user._id}))
+        return rabbitseeds.map(rabbit => ({...rabbit, owner: user._id}))
     })
 })
-.then((bookmarks)=>{
-    // return newly Inserted bookmarks into the db
-    return Bookmark.insertMany(bookmarks)
+.then((rabbits)=>{
+    return Rabbit.insertMany(rabbits)
 })
-.then((bookmarks)=>{
-    console.log(bookmarks)
+.then((rabbits)=>{
+    console.log(rabbits)
 })
 .catch(console.error)
 .finally(()=>{
     process.exit()
 })
+
+
+
+
