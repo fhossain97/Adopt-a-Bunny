@@ -6,15 +6,18 @@
   </head>
   <body>
     <h1>Adopt a Rabbit</h1>
-    <a href="/rabbits/new"><button>New Rabbit</button></a>
+    <a href="/rabbits/new"><button>New Breed</button></a>
 
-    <% allRabbits.forEach((el) => { %>
+    <% allBreeds.forEach((el) => { %>
       <a href="/rabbits/<%= el._id %>">
         <div>
           <td>
-              Name: <%= el.name%><br>
+              Name: <%= el.breed%><br>
           </td>
-
+          <!-- <form method="POST" action="/auth/google">
+            <button>login</button>
+          </form> -->
+          <button>login</button>
       </div>
 </a>
     <% }) %>

@@ -5,31 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/style.css" rel="stylesheet">
-    <title>Product Details</title>
+    <title>Bunny Details</title>
 </head>
 <body>
     <div>
     <a href="/rabbits">Go Back</a>
-    <h1><%= rabbit.name %> Details Page</h1>
-    <h2>Description: <%= rabbit.description %></h2>
-    <h2>Age: <%= rabbit.age %></h2>
-    <h2>Status: <%= rabbit.status %></h2>
+    <h1><%= bunny.name %> Details Page</h1>
+    <h2>Description: <%= bunny.description %></h2>
+    <h2>Age: <%= bunny.age %></h2>
+    <h2>Status: <%= bunny.status %></h2>
 
 
-    <form action="/rabbits/<%= rabbit._id%>/edit>
+    <form action="/rabbits/<%= bunny._id%>/edit>
         <input type="submit" value="Edit Rabbit">
     </form>
 
-    <form method="POST" action="/rabbits/<%= rabbit._id%>?_method=PATCH">
-        Name: <input name="name" type="text" value="<%= rabbit.name %>"><br>
-        <input name="img" type="text" value="<%= rabbit.img %>"><br>
-        Description: <input name="description" type="text" value="<%= rabbit.description %>"><br>
-        Age: <input name="age" type="text" value="<%= rabbit.age %>"><br>
-        Status: <input name="status" type="text" value="<%= rabbit.status %>"><br>
-        <input type="submit" value="Update Rabbit">
+    <form method="POST" action="/rabbits/<%= bunny._id%>?_method=PATCH">
+        Name: <input name="name" type="text" value="<%= bunny.name %>"><br>
+        <input name="img" type="text" value="<%= bunny.img %>"><br>
+        Description: <input name="description" type="text" value="<%= bunny.description %>"><br>
+        Age: <input name="age" type="text" value="<%= bunny.age %>"><br>
+        Status: <input name="status" type="text" value="<%= bunny.status %>"><br>
+        <input type="submit" value="Update Breed">
     </form>
 
-    <form  method="POST" action="/rabbits/<%= rabbit._id %>?_method=DELETE">
+    <form  method="POST" action="/rabbits/<%= bunny._id %>?_method=DELETE">
         <input type="submit" value="Delete Rabbit">
     </form>
 </div>

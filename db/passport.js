@@ -1,5 +1,5 @@
 const passport = require('passport');
-//.OAuth2Strategy is the class instance that we want to use - check based on the specific passpot auth that you use
+
 const User = require('../models/user')
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
@@ -10,10 +10,12 @@ passport.use(new GoogleStrategy({
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOne({ 'googleId': profile.id }, function(err, user) {
+      console.log(user)
       if (err) return cb(err);
       if (user) {
         return cb(null, user);
       } else {
+        console.log('heyyyy')
         let newUser = new User({
           name: profile.displayName,
           email: profile.emails[0].value,

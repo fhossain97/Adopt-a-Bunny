@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 mongoose.connect('mongodb://localhost:27017/adoptABunny', {
-    useNewUrlParser: true
+    useNewUrlParser: true,
 })
 
 const db = mongoose.connection
