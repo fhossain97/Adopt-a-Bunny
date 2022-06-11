@@ -2,22 +2,29 @@
 <html>
   <head>
     <link href="/style.css" rel="stylesheet">
-    <title>Rabbit Breeds</title>
+    <title>Bunnies for Adoption</title>
   </head>
   <body>
     <h1>Adopt a Rabbit</h1>
     <a href="/rabbits/new"><button>New Breed</button></a>
 
-    <% allBreeds.forEach((el) => { %>
+    <% allBunnies.forEach((el) => { %>
       <a href="/rabbits/<%= el._id %>">
         <div>
-          <td>
-              Name: <%= el.breed%><br>
-          </td>
-          <!-- <form method="POST" action="/auth/google">
-            <button>login</button>
-          </form> -->
-          <button>login</button>
+              Name: <%= el.name%>
+              <img src="<%= el.img%>" alt="">
+              Status: <%= el.status%>
+      </div>
+      <div>
+        <ul class="right">
+          <li>
+          <% if (user) { %>
+            <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+          <% } else { %>
+            <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+          <% } %>
+          </li>
+        </ul>
       </div>
 </a>
     <% }) %>

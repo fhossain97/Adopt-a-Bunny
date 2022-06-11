@@ -9,7 +9,7 @@ const bunnySchema = new Schema({
     breed: String,
     age: Number,
     owner: {
-      type: mongoose.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'User'
     }
   });

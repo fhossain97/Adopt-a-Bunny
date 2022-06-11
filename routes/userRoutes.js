@@ -7,7 +7,7 @@ router.get('/', userCtrl.indexRoute)
 
 router.post('/', userCtrl.createRoute)
 
-// router.get('/:id', userCtrl.showRoute)
+router.get('/:id', userCtrl.showRoute)
 
 router.patch('/:id', userCtrl.updateRoute)
 

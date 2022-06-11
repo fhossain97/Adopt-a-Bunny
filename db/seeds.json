@@ -1,30 +1,42 @@
-[{
-    "Breed": "Holland Lop"
-},
-{
-    "Breed": "Dutch" 
-},
-{
-    "Breed": "Lion Head" 
-},
-{
-    "Breed": "Netherland Dwarf" 
-},
-{
-    "Breed": "Flemish Giant" 
-},
-{
-    "Breed": "Blanc de Hotot" 
-},
-{
-    "Breed": "French Angora"
-},
-{
-    "Breed": "Californian"
-},
-{
-    "Breed": "Mini Rex"
-},
-{
-    "Breed": "Himalayan"
-}]
+[
+    {
+    "Name": "Mushu",
+    "Description": "Short haired, brownish-gray colored rabbit with a charming personality. Friendly with all and loves to munch and crunch on any and everything he finds. Needs an energetic owner.",
+    "Img": "",
+    "Status": "Available for Adoption!",
+    "Breed": "Holland Lop",
+    "Age": "5"
+    },
+    {
+    "Name": "Simba",
+    "Description": "Light-brown colored, blue-eyed rabbit with a knack for snacks. Independent personality that likes to lead his humans to do his bidding. Needs a gullible owner.",
+    "Img": "",
+    "Status": "Available for Adoption!",
+    "Breed": "Lion Head" ,
+    "Age": "2"
+    },
+    {
+    "Name": "MoonMoon",
+    "Description": "White-colored rabbit with black eyeliner, and black spots. Loves endless cuddles, pats, and kisses. Needs a patient, loving owner.",
+    "Img": "",
+    "Status": "Available for Adoption!",
+    "Breed": "Netherland Dwarf",
+    "Age": "3"
+    },
+    {
+    "Name": "Meeshu",
+    "Description": "Pure white colored rabbit with black eyes. Filled with anxiety and runs away from slight movement. Needs an anxious owner to match.",
+    "Img": "",
+    "Status": "Available for Adoption!",
+    "Breed": "Blanc de Hotot",
+    "Age": "3"
+    },
+    {
+    "Name": "Steven",
+    "Description": "Black-colored rabbit with large ears. Stomps at all times due to a constant need for attention and to assert dominance. Needs an owner that will be able to train him well.",
+    "Img": "",
+    "Status": "Available for Adoption!",
+    "Breed": "Mini Rex",
+    "Age": "1"
+    }
+]

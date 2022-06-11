@@ -1,27 +1,28 @@
 require('./connection')
 
-const Breed = require('../models/breed')
+const Bunny = require('../models/bunny')
 const User = require('../models/user')
 const rabbitseeds = require('./seeds.json')
 
-Breed.deleteMany({})
+Bunny.deleteMany({})
 .then(()=> User.deleteMany({}))
 .then(() => {
-    return User.create({name: ""})
+    return User.create({name: "Farhana"})
     .then( user => {
-        return rabbitseeds.map(breed => ({...breed, owner: user._id}))
+        return rabbitseeds.map(rabbit => ({...rabbit, owner: user._id}))
     })
 })
-.then((breeds)=>{
-    return Breed.insertMany(breeds)
+.then(()=>{
+    return Bunny.insertMany(rabbitseeds)
 })
-.then((breeds)=>{
-    console.log(breeds)
+.then((bunnies)=>{
+    console.log(bunnies)
 })
 .catch(console.error)
 .finally(()=>{
     process.exit()
 })
+
 
 
 

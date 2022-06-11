@@ -4,6 +4,8 @@ const bunnyCtrl = require('../controllers/bunnyController')
 
 router.get('/new', bunnyCtrl.newRoute)
 
+router.get('/', bunnyCtrl.indexRoute)
+
 router.post('/', bunnyCtrl.createRoute)
 
 router.post('/:id/adopt', bunnyCtrl.adopt)

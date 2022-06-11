@@ -1,5 +1,11 @@
-const breed = require("../models/breed");
-const Bunny = require("../models/breed");
+const Bunny = require("../models/bunny");
+
+function indexRoute(req, res) {
+  Bunny.find({})
+  .populate('owner')
+  .then(allBunnies => res.render("index", { allBunnies }))
+  //res.render("index", { allBunnies });
+}
 
 let newRoute = (req, res) => {
   res.render("new");
@@ -8,7 +14,6 @@ let newRoute = (req, res) => {
 function createRoute(req, res) {
   let newBunny = new Bunny(req.body);
   newBunny.save(() => console.log("New rabbit was saved!"));
-  
   res.redirect("/rabbits");
 }
 
@@ -34,14 +39,15 @@ async function deleteRoute(req, res) {
 
 let adopt = (req, res) => {
   Bunny.findById(req.params.id).then((bunny) => {
-    res.json({message: "Adopted!"});
-    product.save(() => {
+    res.json({ message: "Adopted!" });
+    bunny.save(() => {
       res.redirect(`/rabbits/${req.params.id}`);
     });
   });
 };
 
 module.exports = {
+  indexRoute,
   newRoute,
   createRoute,
   showRoute,

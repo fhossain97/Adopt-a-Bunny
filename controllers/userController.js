@@ -1,4 +1,4 @@
-const User = require('../models/user')
+const User = require("../models/user");
 
 async function indexRoute(req, res) {
   let allUsers = await User.find({});
@@ -7,14 +7,18 @@ async function indexRoute(req, res) {
 
 function createRoute(req, res) {
   let newUser = new User(req.body);
-  newUser.save(() => res.json({message: 'User Create'}));
+  newUser.save(() => res.json({ message: "User Created" }));
 }
 
-// function showRoute(req, res) {
-//   User.findById(req.params.id).then((user) => {
-//     res.json(user);
-//   });
-// }
+function showRoute(req, res) {
+  User.findById(req.params.id, (err, user) =>{
+      if(err){
+          res.status(400).json(err)
+          return
+      }
+      res.json(user)
+  })
+}
 
 async function updateRoute(req, res) {
   await User.findByIdAndUpdate(req.params.id, req.body);
@@ -23,13 +27,13 @@ async function updateRoute(req, res) {
 
 async function deleteRoute(req, res) {
   await User.findByIdAndDelete(req.params.id);
-  res.json({message: 'User deleted'});
+  res.json({ message: "User deleted" });
 }
 
 module.exports = {
   indexRoute,
   createRoute,
-  // showRoute,
+  showRoute,
   updateRoute,
-  deleteRoute
+  deleteRoute,
 };
