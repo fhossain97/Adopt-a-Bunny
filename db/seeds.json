@@ -1,42 +1,49 @@
 [
-    {
-    "Name": "Mushu",
-    "Description": "Short haired, brownish-gray colored rabbit with a charming personality. Friendly with all and loves to munch and crunch on any and everything he finds. Needs an energetic owner.",
-    "Img": "",
-    "Status": "Available for Adoption!",
-    "Breed": "Holland Lop",
-    "Age": "5"
-    },
-    {
-    "Name": "Simba",
-    "Description": "Light-brown colored, blue-eyed rabbit with a knack for snacks. Independent personality that likes to lead his humans to do his bidding. Needs a gullible owner.",
-    "Img": "",
-    "Status": "Available for Adoption!",
-    "Breed": "Lion Head" ,
-    "Age": "2"
-    },
-    {
-    "Name": "MoonMoon",
-    "Description": "White-colored rabbit with black eyeliner, and black spots. Loves endless cuddles, pats, and kisses. Needs a patient, loving owner.",
-    "Img": "",
-    "Status": "Available for Adoption!",
-    "Breed": "Netherland Dwarf",
-    "Age": "3"
-    },
-    {
-    "Name": "Meeshu",
-    "Description": "Pure white colored rabbit with black eyes. Filled with anxiety and runs away from slight movement. Needs an anxious owner to match.",
-    "Img": "",
-    "Status": "Available for Adoption!",
-    "Breed": "Blanc de Hotot",
-    "Age": "3"
-    },
-    {
-    "Name": "Steven",
-    "Description": "Black-colored rabbit with large ears. Stomps at all times due to a constant need for attention and to assert dominance. Needs an owner that will be able to train him well.",
-    "Img": "",
-    "Status": "Available for Adoption!",
-    "Breed": "Mini Rex",
-    "Age": "1"
-    }
+  {
+    "name": "Mushu",
+    "description": "Short haired, brownish-gray colored rabbit with a charming personality. Friendly with all and loves to munch and crunch on any and everything he finds. Needs an energetic owner.",
+    "img": "",
+    "status": "Available for Adoption!",
+    "breed": "Holland Lop",
+    "age": "5"
+  },
+  {
+    "name": "Simba",
+    "description": "Light-brown colored, blue-eyed rabbit with a knack for snacks. Independent personality that likes to lead his humans to do his bidding. Needs a gullible owner.",
+    "img": "",
+    "status": "Available for Adoption!",
+    "breed": "Lion Head",
+    "age": "2"
+  },
+  {
+    "name": "MoonMoon",
+    "description": "White-colored rabbit with black eyeliner, and black spots. Loves endless cuddles, pats, and kisses. Needs a patient, loving owner.",
+    "img": "",
+    "status": "Available for Adoption!",
+    "breed": "Netherland Dwarf",
+    "age": "3"
+  },
+  {
+    "name": "Meeshu",
+    "description": "Pure white colored rabbit with black eyes. Filled with anxiety and runs away from slight movement. Needs an anxious owner to match.",
+    "img": "",
+    "status": "Available for Adoption!",
+    "breed": "Blanc de Hotot",
+    "age": "3"
+  },
+  {
+    "name": "Steven",
+    "description": "Black-colored rabbit with large ears. Stomps at all times due to a constant need for attention and to assert dominance. Needs an owner that will be able to train him well.",
+    "img": "",
+    "status": "Available for Adoption!",
+    "breed": "Mini Rex",
+    "age": "1"
+  },
+  {
+    "name": "SRK",
+    "description": "Brown-colored rabbit with short black ears. Fun, warm personality at all times. Needs playful owner.",
+    "status": "Available for Adoption!",
+    "breed": "American Fuzzy Lop",
+    "age": "7"
+  }
 ]

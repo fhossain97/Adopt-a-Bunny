@@ -1,32 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link href="/style.css" rel="stylesheet">
-    <title>Bunnies for Adoption</title>
-  </head>
-  <body>
-    <h1>Adopt a Rabbit</h1>
-    <a href="/rabbits/new"><button>New Breed</button></a>
+<%- include('./partials/header.ejs') %> 
 
-    <% allBunnies.forEach((el) => { %>
-      <a href="/rabbits/<%= el._id %>">
-        <div>
-              Name: <%= el.name%>
-              <img src="<%= el.img%>" alt="">
-              Status: <%= el.status%>
-      </div>
-      <div>
-        <ul class="right">
-          <li>
-          <% if (user) { %>
-            <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
-          <% } else { %>
-            <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-          <% } %>
-          </li>
-        </ul>
-      </div>
+<% allBunnies.forEach((el) => { %>
+<a href="/rabbits/<%= el._id %>">
+  <div>
+    <img src="<%= el.img%>" alt="" /><br />
+    Name: <%= el.name%><br />
+    Status: <%= el.status%><br />
+  </div>
 </a>
-    <% }) %>
-  </body>
-</html>
+<% }) %> 
+
+<%- include('./partials/footer.ejs') %>

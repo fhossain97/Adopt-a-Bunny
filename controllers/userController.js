@@ -11,13 +11,13 @@ function createRoute(req, res) {
 }
 
 function showRoute(req, res) {
-  User.findById(req.params.id, (err, user) =>{
-      if(err){
-          res.status(400).json(err)
-          return
-      }
-      res.json(user)
-  })
+  User.findById(req.params.id, (err, user) => {
+    if (err) {
+      res.status(400).json(err);
+      return;
+    }
+    res.json(user);
+  });
 }
 
 async function updateRoute(req, res) {
