@@ -18,7 +18,7 @@ require("./db/passport");
 const userRoute = require("./routes/userRoutes");
 const bunnyRoute = require("./routes/bunnyRoutes");
 const oAuthRoute = require("./routes/oAuth");
-const res = require("express/lib/response");
+const editRoute = require("./routes/editRoutes");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -49,6 +49,7 @@ app.use(function (req, res, next) {
 app.use("/", oAuthRoute);
 app.use("/users", userRoute);
 app.use("/rabbits", bunnyRoute);
+app.use("/rabbits", editRoute);
 
 app.listen(PORT, () => {
   console.log(`✅ PORT: ${PORT} 🌟`);

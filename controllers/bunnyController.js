@@ -23,35 +23,18 @@ function showRoute(req, res) {
   });
 }
 
-function editRoute(req, res) {
-  res.render("show", { bunny: Bunny, id: req.params.id });
-}
 
 async function updateRoute(req, res) {
   await Bunny.findByIdAndUpdate(req.params.id, req.body).populate("owner");
-  res.redirect(`/rabbits/${req.params.id}`);
-}
-
-async function deleteRoute(req, res) {
-  await Bunny.findByIdAndDelete(req.params.id).populate("owner");
   res.redirect("/rabbits");
 }
 
-let adopt = (req, res) => {
-  Bunny.findById(req.params.id).then((bunny) => {
-    bunny.owner = req.user._id;
-    bunny.save(() => {
-      res.redirect(`/rabbits/${req.params.id}`);
-    });
-  });
-};
+
 module.exports = {
   indexRoute,
   newRoute,
   createRoute,
   showRoute,
-  editRoute,
-  updateRoute,
-  deleteRoute,
-  adopt,
+  updateRoute
+
 };

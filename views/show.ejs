@@ -1,40 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/style.css" rel="stylesheet">
-    <title>Bunny Details</title>
-</head>
+<%- include('./partials/header.ejs') %> 
+
 <body>
     <div>
-    <a href="/rabbits">Go Back</a>
-    <h1><%= bunny.name %> Details Page</h1>
+    <h1><%= bunny.name %></h1>
     <%= bunny.img %>
-    <h2>Description: <%= bunny.description %></h2>
     <h2>Age: <%= bunny.age %></h2>
-    <h2>Status: <%= bunny.status %></h2>
+    <h2>Description: <%= bunny.description %></h2>
     <h2>Breed: <%= bunny.breed %></h2>
-
-
-    <form action="/rabbits/<%= bunny._id%>/edit>
-        <input type="submit" value="Edit Rabbit">
-    </form>
+    <h2>Status: <%= bunny.status %></h2>
+    </div>
 
     <form method="POST" action="/rabbits/<%= bunny._id%>?_method=PATCH">
-        Name: <input name="name" type="text" value="<%= bunny.name %>"><br>
-        <input name="img" type="text" value="<%= bunny.img %>"><br>
-        Description: <input name="description" type="text" value="<%= bunny.description %>"><br>
-        Age: <input name="age" type="text" value="<%= bunny.age %>"><br>
-        Status: <input name="status" type="text" value="<%= bunny.status %>"><br>
-        Breed: <input name="breed" type="text" value="<%= bunny.breed %>"><br>
-        <input type="submit" value="Update Rabbit">
+        Ready to adopt? <input name="status" type="submit" onclick="alert('Congratulations! We are reviewing your adoption application. Stay tuned!')" value="Pending Adoption">
     </form>
 
-    <form  method="POST" action="/rabbits/<%= bunny._id %>?_method=DELETE">
-        <input type="submit" value="Delete Rabbit">
-    </form>
-</div>
 </body>
-</html>
+
+    <%- include('./partials/footer.ejs') %>

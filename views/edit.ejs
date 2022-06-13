@@ -1,0 +1,26 @@
+<%- include('./partials/header.ejs') %> 
+
+<div>
+    <h1><%= bunny.name %></h1>
+    <%= bunny.img %>
+    <h2>Age: <%= bunny.age %></h2>
+    <h2>Description: <%= bunny.description %></h2>
+    <h2>Breed: <%= bunny.breed %></h2>
+    <h2>Status: <%= bunny.status %></h2>
+</div>
+
+<form method="POST" action="/rabbits/<%= bunny._id%>?_method=PATCH">
+   Name: <input name="name" type="text" value="<%= bunny.name %>"><br>
+   <input name="img" type="text" value="<%= bunny.img %>"><br>
+   Description: <input name="description" type="text" value="<%= bunny.description %>"><br>
+   Age: <input name="age" type="text" value="<%= bunny.age %>"><br>
+   Status: <input name="status" type="text" value="<%= bunny.status %>"><br>
+   Breed: <input name="breed" type="text" value="<%= bunny.breed %>"><br>
+   <input type="submit" value="Update Rabbit">
+</form>
+
+    <form  method="POST" action="/rabbits/<%= bunny._id%>/edit?_method=DELETE">
+        <input type="submit" value="Delete Rabbit">
+    </form>
+
+    <%- include('./partials/footer.ejs') %>
