@@ -1,19 +1,24 @@
-<%- include('./partials/header.ejs') %> 
+<%- include('./partials/header.ejs') %>
 
 <body>
-    <div>
+  <div>
     <h1><%= bunny.name %></h1>
     <%= bunny.img %>
     <h2>Age: <%= bunny.age %></h2>
     <h2>Description: <%= bunny.description %></h2>
     <h2>Breed: <%= bunny.breed %></h2>
     <h2>Status: <%= bunny.status %></h2>
-    </div>
+  </div>
 
-    <form method="POST" action="/rabbits/<%= bunny._id%>?_method=PATCH">
-        Ready to adopt? <input name="status" type="submit" onclick="alert('Congratulations! We are reviewing your adoption application. Stay tuned!')" value="Pending Adoption">
-    </form>
-
+  <form method="POST" action="/rabbits/<%= bunny._id%>?_method=PATCH">
+    Ready to adopt?
+    <input
+      name="status"
+      type="submit"
+      onclick="alert('Congratulations! We are reviewing your adoption application. Stay tuned!')"
+      value="Pending Adoption"
+    />
+  </form>
 </body>
 
-    <%- include('./partials/footer.ejs') %>
+<%- include('./partials/footer.ejs') %>

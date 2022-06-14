@@ -12,5 +12,4 @@ router.get("/:id", bunnyCtrl.showRoute);
 
 router.patch("/:id", bunnyCtrl.updateRoute);
 
-
 module.exports = router;

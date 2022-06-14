@@ -1,7 +1,7 @@
 [
   {
     "name": "Mushu",
-    "description": "Short haired, brownish-gray colored rabbit with a charming personality. Friendly with all and loves to munch and crunch on any and everything he finds. Needs an energetic owner.",
+    "description": "Medium sized male with long-floppy ears and a brownish-gray coat. Friendly with all and loves to munch and crunch on any and everything. Needs an energetic owner.",
     "img": "",
     "status": "Available for Adoption!",
     "breed": "Holland Lop",
@@ -9,7 +9,7 @@
   },
   {
     "name": "Simba",
-    "description": "Light-brown colored, blue-eyed rabbit with a knack for snacks. Independent personality that likes to lead his humans to do his bidding. Needs a gullible owner.",
+    "description": "Small-sized male with ocean blue eyes and a light-brown coat. Indepdent rabbit that likes to manipulate his care takers into serving his every need. Needs a gullible owner.",
     "img": "",
     "status": "Available for Adoption!",
     "breed": "Lion Head",
@@ -17,7 +17,7 @@
   },
   {
     "name": "MoonMoon",
-    "description": "White-colored rabbit with black eyeliner, and black spots. Loves endless cuddles, pats, and kisses. Needs a patient, loving owner.",
+    "description": "Medium sized female with a white coat with rich brown eyes and three black spots on her back. Loves endless cuddles, pats, and kisses. Needs a patient, loving owner.",
     "img": "",
     "status": "Available for Adoption!",
     "breed": "Netherland Dwarf",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Meeshu",
-    "description": "Pure white colored rabbit with black eyes. Filled with anxiety and runs away from slight movement. Needs an anxious owner to match.",
+    "description": "Small-sized female with smoked out black eyeliner around the eyes and a pure-white coat. Filled with anxiety and runs away from slight movement. Needs an anxious owner to match.",
     "img": "",
     "status": "Available for Adoption!",
     "breed": "Blanc de Hotot",
@@ -33,7 +33,7 @@
   },
   {
     "name": "Steven",
-    "description": "Black-colored rabbit with large ears. Stomps at all times due to a constant need for attention and to assert dominance. Needs an owner that will be able to train him well.",
+    "description": "Large-sized male with long ears and a shiny black coat. Stomps at all times due to a constant need for attention and to assert dominance. Needs an owner that will be able to train him well.",
     "img": "",
     "status": "Available for Adoption!",
     "breed": "Mini Rex",
@@ -41,7 +41,7 @@
   },
   {
     "name": "SRK",
-    "description": "Brown-colored rabbit with short black ears. Fun, warm personality at all times. Needs playful owner.",
+    "description": "Medium-sized male with small ears and a dark-brown coat. Fun, warm personality that is humorous and sweet. Needs playful owner.",
     "status": "Available for Adoption!",
     "breed": "American Fuzzy Lop",
     "age": "7"

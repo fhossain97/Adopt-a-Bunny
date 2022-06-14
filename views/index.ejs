@@ -1,6 +1,6 @@
 <%- include('./partials/header.ejs') %> <% allBunnies.forEach((el) => { %>
 
-  <a href="/rabbits/<%= el._id %>">
+<a href="/rabbits/<%= el._id %>">
   <div>
     <img src="<%= el.img%>" alt="" /><br />
     Name: <%= el.name%><br />

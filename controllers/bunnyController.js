@@ -23,18 +23,15 @@ function showRoute(req, res) {
   });
 }
 
-
 async function updateRoute(req, res) {
   await Bunny.findByIdAndUpdate(req.params.id, req.body).populate("owner");
   res.redirect("/rabbits");
 }
-
 
 module.exports = {
   indexRoute,
   newRoute,
   createRoute,
   showRoute,
-  updateRoute
-
+  updateRoute,
 };
