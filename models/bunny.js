@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const bunnySchema = new Schema({
   name: String,
   description: String,
-  img: String,
+  images: String,
   status: String,
   breed: String,
   age: Number,

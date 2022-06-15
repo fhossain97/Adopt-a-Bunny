@@ -1,19 +1,19 @@
 <%- include('./partials/header.ejs') %>
 
-<h1>Rabbit Adoption Submission</h1>
-<h4>
-  As a shelter, we rely on our web viewers to send in any rabbits they may have
+<h1 class="new-header">Rabbit Adoption Submission</h1>
+<h3>
+  As a shelter, we rely on our online community to send in any rabbits they may have
   for adoption. Our staff will review each submission and make the rabbits
-  available for adoption. We thank you for your contribution to our shelter.
-</h4>
+  available for adoption. We thank each and every one of you for your contribution to the shelter.
+</h3>
 
 <form action="/rabbits" method="POST">
   Name: <input name="name" type="text" /><br />
-  Img:<input name="img" type="text" /><br />
+  Image Link:<input name="img" type="text" /><br />
   Description: <input name="description" type="text" /><br />
   Age: <input name="age" type="text" /><br />
   Status: Pending <br />
-  <input type="submit" value="Submit" />
+  <div class="button-position"><input class="button" type="submit" value="Submit" /></div>
 </form>
 
 <%- include('./partials/footer.ejs') %>

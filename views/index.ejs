@@ -1,11 +1,13 @@
 <%- include('./partials/header.ejs') %> <% allBunnies.forEach((el) => { %>
 
+  
 <a href="/rabbits/<%= el._id %>">
-  <div>
-    <img src="<%= el.img%>" alt="" /><br />
-    Name: <%= el.name%><br />
+  <div class="index">
+    <img src="<%= el.images%>" /><br />
+    <%= el.name%><br>
     Status: <%= el.status%><br />
-  </div>
+</div>
 </a>
+
 
 <% }) %> <%- include('./partials/footer.ejs') %>

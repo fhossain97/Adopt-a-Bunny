@@ -4,25 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="/header.css" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
     <title>Homepage</title>
-    <h1>Adopt a Rabbit</h1>
-    <ul class="header">
-      <li class="nav-item">
-        <a class="active" href="/rabbits">Home Page</a>
-      </li>
-      <li class="nav-item">
-        <a class="active" href="/rabbits/new">Submit Request</a>
-      </li>
-      <li class="nav-item">
-        <% if (user) { %>
-          <a class="active" href="/logout">Log Out</a>
-          <% } else { %>
-          <a class="active" href="/auth/google">Login with Google</a>
-          <% } %>
-      </li>
-    </ul>
   </head>
   <body>
-    <main>
+    <header>
+      <h1>Adopt A Bunny</h1>
+    </header>
+    <nav>
+      <div class="container teal borderYtoX">
+        <a href="/rabbits">HOME</a>
+        <a href="/rabbits/new">SUBMIT REQUEST</a>
+        <% if (user) { %>
+        <a class="active" href="/logout">LOG OUT</a>
+        <% } else { %>
+        <a class="active" href="/auth/google">GOOGLE LOGIN</a>
+        <% } %>
+      </div>
+    </nav>
+  </body>
+  <main>
 
