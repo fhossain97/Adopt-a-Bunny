@@ -1,5 +1,4 @@
 const express = require("express");
-const favicon = require("serve-favicon");
 const app = express();
 const PORT = 3000;
 const path = require("path");
@@ -25,8 +24,6 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.json());
 app.use(express.static("public"));
-app.use(express.static('public/favicon.ico'))
-app.use(favicon(__dirname + '/public/favicon.ico'))
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 app.use(cors());
