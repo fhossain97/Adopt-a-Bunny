@@ -34,7 +34,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Video Walkthrough
 
-Heroku Link:
+Heroku Link: https://adopt-a-bunny.herokuapp.com/rabbits
 
 ## Challenges
 
