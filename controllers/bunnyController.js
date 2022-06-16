@@ -1,4 +1,5 @@
 const Bunny = require("../models/bunny");
+const cloudinary = require("../db/cloudinary");
 
 async function indexRoute(req, res) {
   let allBunnies = await Bunny.find({}).populate("owner");
@@ -10,6 +11,12 @@ let newRoute = (req, res) => {
 };
 
 function createRoute(req, res) {
+  console.log(req.file);
+  if (req.file) {
+    // let image = cloudinary.uploads(req.file.path, "images")
+    //console.log(image)
+    req.body.images = "/" + req.file.filename;
+  }
   let newBunny = new Bunny(req.body);
   newBunny.save(() => console.log("New rabbit was saved!"));
   Bunny.findById(newBunny._id)
@@ -24,6 +31,13 @@ function showRoute(req, res) {
 }
 
 async function updateRoute(req, res) {
+  console.log(req.file);
+  if (req.file) {
+    // let image = cloudinary.uploads(req.file.path, "images")
+    //console.log(image)
+    req.body.images = "/" + req.file.filename;
+  }
+  console.log(req.file);
   await Bunny.findByIdAndUpdate(req.params.id, req.body).populate("owner");
   res.redirect("/rabbits");
 }

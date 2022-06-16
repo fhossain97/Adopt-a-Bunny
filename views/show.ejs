@@ -3,7 +3,7 @@
 <body class="show">
   <div>
     <h1><%= bunny.name %></h1>
-    <img src="<%= bunny.images %>">
+    <img src="<%= bunny.images %>" />
     <h2>Age: <%= bunny.age %></h2>
     <h2>Description: <%= bunny.description %></h2>
     <h2>Breed: <%= bunny.breed %></h2>
@@ -11,18 +11,18 @@
   </div>
 
   <form method="POST" action="/rabbits/<%= bunny._id%>?_method=PATCH">
-    Ready to adopt? Click on the button below to submit your adoption application!
+    Ready to adopt? Click on the button below to submit your adoption
+    application!
     <div class="button-position">
-    <input class="button"
-      name="status"
-      type="submit"
-      onclick="alert('Congratulations! We are reviewing your adoption application. Stay tuned!')"
-      value="Pending Adoption"
-    />
-  </div>
+      <input
+        class="button"
+        name="status"
+        type="submit"
+        onclick="alert('Congratulations! We are reviewing your adoption application. Stay tuned!')"
+        value="Pending Adoption"
+      />
+    </div>
   </form>
 </body>
-
-
 
 <%- include('./partials/footer.ejs') %>

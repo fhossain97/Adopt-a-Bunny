@@ -2,16 +2,19 @@
 
 <div class="show">
   <h1><%= bunny.name %></h1>
-  <img src="<%= bunny.images %>">
+  <img src="<%= bunny.images %>" />
   <h2>Age: <%= bunny.age %></h2>
   <h2>Description: <%= bunny.description %></h2>
   <h2>Breed: <%= bunny.breed %></h2>
   <h2>Status: <%= bunny.status %></h2>
 </div>
 
-<form method="POST" action="/rabbits/<%= bunny._id%>?_method=PATCH">
+<form
+  enctype="multipart/form-data"
+  method="POST"
+  action="/rabbits/<%= bunny._id%>?_method=PATCH"
+>
   Name: <input name="name" type="text" value="<%= bunny.name %>" /><br />
-  Image Link: <input name="img" type="text" value="<%= bunny.images %>" /><br />
   Description:
   <input
     name="description"
@@ -19,14 +22,30 @@
     value="<%= bunny.description %>"
   /><br />
   Age: <input name="age" type="text" value="<%= bunny.age %>" /><br />
-  Status: <input name="status" type="text" placeholder="Available for Adoption!" value="<%= bunny.status %>" /><br />
+  Status:
+  <input
+    name="status"
+    type="text"
+    placeholder="Available for Adoption!"
+    value="<%= bunny.status %>"
+  /><br />
   Breed: <input name="breed" type="text" value="<%= bunny.breed %>" /><br />
-  <div class="button-position2"><input class="button" type="submit" value="Update" /></div>
+  Image:
+  <input 
+    name="Image"
+    type="file"
+    accept="image/png, image/jpeg"
+    value="<%= bunny.images %>"
+  /><br />
+  <div class="button-position2">
+    <input class="button" type="submit" value="Update" />
+  </div>
 </form>
 
 <form method="POST" action="/rabbits/<%= bunny._id%>/edit?_method=DELETE">
-  <div class="button-position3"><input class="button" type="submit" value="Delete" /></div>
+  <div class="button-position3">
+    <input class="button" type="submit" value="Delete" />
+  </div>
 </form>
 
 <%- include('./partials/footer.ejs') %>
-

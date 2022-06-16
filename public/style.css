@@ -1,8 +1,8 @@
 @import "https://fonts.googleapis.com/css?family=Raleway";
 
 html {
-background-color: cornsilk;
-font-family: Raleway;
+  background-color: cornsilk;
+  font-family: Raleway;
 }
 
 header {
@@ -14,11 +14,10 @@ header {
 
 header h1 {
   animation: glow 10s ease-in-out infinite;
-  font-size: 60px;
+  font-size: 100px;
   font-weight: lighter;
   margin-bottom: 5px;
 }
-
 
 div.container {
   margin: 0 auto;
@@ -38,7 +37,7 @@ div.container a {
 }
 
 .teal {
-  background: #6495ED;
+  background: #6495ed;
 }
 
 div.borderYtoX a:before,
@@ -48,7 +47,7 @@ div.borderYtoX a:after {
   height: 100%;
   width: 2px;
   content: "";
-  background: goldenrod;
+  background: gold;
   transition: all 0.5s;
 }
 
@@ -90,25 +89,33 @@ ul {
 }
 
 .index {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto;
-  background-color: lightblue;
+  background-color: cornsilk;
   padding: 10px;
+  text-align: center;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
 }
 
 img {
   height: 225px;
   width: 300px;
-  border-radius: 50%;
+  border-radius: 75%;
+}
 
+.intro {
+  text-align: center;
+  font-size: x-large;
 }
 
 .new-header {
   text-align: center;
 }
 
-input[type=text] {
+input[type="text"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -117,7 +124,7 @@ input[type=text] {
   outline: none;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
   background-color: lightblue;
 }
 
@@ -136,12 +143,17 @@ input[type=text]:focus {
   box-shadow: 0 4px #999;
 }
 
-.button-position, .button-position2, .button-position3 {
-text-align: center;
-padding-block: 10px;
+
+.button-position,
+.button-position2,
+.button-position3 {
+  text-align: center;
+  padding-block: 10px;
 }
 
-.button:hover {background-color: goldenrod}
+.button:hover {
+  background-color: goldenrod;
+}
 
 .button:active {
   background-color: #3e8e41;

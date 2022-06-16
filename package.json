@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "bootstrap": "^5.2.0-beta1",
+    "cloudinary": "^1.30.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
@@ -9,6 +9,8 @@
     "method-override": "^3.0.0",
     "mongoose": "^6.3.5",
     "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
     "passport": "^0.6.0",
     "passport-google-oauth": "^2.0.0",
     "serve-favicon": "^2.5.0"
@@ -30,8 +32,5 @@
   "bugs": {
     "url": "https://github.com/fhossain97/Adopt-a-Bunny/issues"
   },
-  "homepage": "https://github.com/fhossain97/Adopt-a-Bunny#readme",
-  "devDependencies": {
-    "tailwindcss": "^3.1.3"
-  }
+  "homepage": "https://github.com/fhossain97/Adopt-a-Bunny#readme"
 }

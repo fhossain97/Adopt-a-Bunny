@@ -1,13 +1,23 @@
-<%- include('./partials/header.ejs') %> <% allBunnies.forEach((el) => { %>
+<%- include('./partials/header.ejs') %>
 
-  
-<a href="/rabbits/<%= el._id %>">
-  <div class="index">
-    <img src="<%= el.images%>" /><br />
-    <%= el.name%><br>
-    Status: <%= el.status%><br />
+<h3 class="intro">
+  Welcome to the Bunny INC shelter webpage! Here you will find a host of bunnies
+  in need of a new home. Submit your request to adopt or send us information on
+  a new rabbit that needs to be rehomed. Our staff will promptly review all
+  requests and get back to you
+</h3>
+
+<div class="parent">
+  <% allBunnies.forEach((el) => { %>
+
+  <a href="/rabbits/<%= el._id %>">
+    <div class="index">
+      <img src="<%= el.images%>" /><br />
+      <%= el.name%><br />
+      Status: <%= el.status%><br />
+    </div>
+  </a>
+
+  <% }) %>
 </div>
-</a>
-
-
-<% }) %> <%- include('./partials/footer.ejs') %>
+<%- include('./partials/footer.ejs') %>
