@@ -32,6 +32,10 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
+## Video Walkthrough
+
+Heroku Link:
+
 ## Challenges
 
 Ensuring that the code was runnign smoothly as various components (oAuth, multer, etc.) were added into it. Current challenge is to get cloudinary running. 
