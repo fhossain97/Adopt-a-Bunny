@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000
 const path = require("path");
 const morgan = require("morgan");
 const cors = require("cors");
@@ -74,6 +74,7 @@ app.use("/rabbits", bunnyRoute);
 app.use("/rabbits", editRoute);
 
 
-app.listen(PORT, () => {
-  console.log(`✅ PORT: ${PORT} 🌟`);
-});
+
+app.listen(PORT, ()=> {
+    console.log(`Listening on PORT ${PORT}`)
+})
