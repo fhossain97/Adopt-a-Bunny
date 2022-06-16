@@ -11,7 +11,7 @@ The following **required** user stories are complete:
 - [x] User is able to veiew list of available rabbits for adoption
 - [x] User can submit rabbits for adoption by creating a new request
 - [x] User can login and logout to the website using their google credentials
--  User can request to adopt any rabbit of their choice
+- [x] User can request to adopt any rabbit of their choice
 
 The following **stretch** user stories are implemented:
 
