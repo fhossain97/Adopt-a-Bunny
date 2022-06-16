@@ -38,4 +38,4 @@ Heroku Link: https://adopt-a-bunny.herokuapp.com/rabbits
 
 ## Challenges
 
-Ensuring that the code was runnign smoothly as various components (oAuth, multer, etc.) were added into it. Current challenge is to get cloudinary running. 
+Ensuring that the code was running smoothly as various components (oAuth, multer, etc.) were added into it. Current challenge is to implement cloudinary. 
