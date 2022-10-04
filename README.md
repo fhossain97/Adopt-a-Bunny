@@ -32,7 +32,7 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
-## Video Walkthrough
+## Deployment
 
 Heroku Link: https://adopt-a-bunny.herokuapp.com/rabbits
 
