@@ -22,6 +22,9 @@
   "description": "",
   "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fhossain97/Adopt-a-Bunny.git"
