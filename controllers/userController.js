@@ -30,6 +30,7 @@ async function deleteRoute(req, res) {
   res.json({ message: "User deleted" });
 }
 
+
 module.exports = {
   indexRoute,
   createRoute,

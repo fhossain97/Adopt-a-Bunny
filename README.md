@@ -2,8 +2,6 @@
 
 **Adopt-A-Bunny** is a animal-shelter inspired website where users are able to adopt rabbits. 
 
-Time spent: **50** hours spent in total
-
 ## User Stories
 
 The following **required** user stories are complete:
@@ -22,7 +20,6 @@ Further development ideas:
 1. Display user's username on the website once logged in
 2. Have an option for creating an account if google credentials are not used
 3. Users will be recommended animal shelters in their area
-4. Store images in cloudinary 
 
 ## Video Walkthrough
 
@@ -38,4 +35,4 @@ Heroku Link: https://adopt-a-bunny.herokuapp.com/rabbits
 
 ## Challenges
 
-Ensuring that the code was running smoothly as various components (oAuth, multer, etc.) were added into it. Current challenge is to implement cloudinary. 
+Ensuring that the code was running smoothly as various components (oAuth, multer, etc.) were added into it. 

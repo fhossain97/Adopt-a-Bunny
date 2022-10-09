@@ -1,6 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Raleway";
 
-html {
+html, .show {
   background-color: cornsilk;
   font-family: Raleway;
 }
@@ -164,3 +164,9 @@ input[type="text"]:focus {
 .show {
   text-align: center;
 }
+
+
+.modal-header {
+  background-color: cornflowerblue;
+}
+

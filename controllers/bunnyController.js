@@ -13,10 +13,11 @@ let newRoute = (req, res) => {
 function createRoute(req, res) {
   console.log(req.file);
   if (req.file) {
-    // let image = cloudinary.uploads(req.file.path, "images")
-    //console.log(image)
-    req.body.images = "/" + req.file.filename;
+    // let cloud = cloudinary.uploader.upload(req.file.filename, "images")
+    // console.log(cloud)
+    req.body.images = req.file.path;
   }
+  console.log(req.body)
   let newBunny = new Bunny(req.body);
   newBunny.save(() => console.log("New rabbit was saved!"));
   Bunny.findById(newBunny._id)
@@ -33,9 +34,7 @@ function showRoute(req, res) {
 async function updateRoute(req, res) {
   console.log(req.file);
   if (req.file) {
-    // let image = cloudinary.uploads(req.file.path, "images")
-    //console.log(image)
-    req.body.images = "/" + req.file.filename;
+    req.body.images = req.file.path;
   }
   console.log(req.file);
   await Bunny.findByIdAndUpdate(req.params.id, req.body).populate("owner");
