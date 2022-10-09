@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/fhossain97/Adopt-a-Bunny/issues"
   },
-  "homepage": "https://github.com/fhossain97/Adopt-a-Bunny#readme"
+  "homepage": "https://github.com/fhossain97/Adopt-a-Bunny#readme",
+  "devDependencies": {
+    "@vercel/node": "^2.5.22"
+  }
 }
