@@ -1,5 +1,4 @@
 const passport = require("passport");
-require(dotenv).config()
 
 const User = require("../models/user");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
@@ -9,7 +8,8 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_SECRET,
-      callbackURL: process.env.GOOGLE_CALLBACK,
+      callbackURL: "/auth/google",
+      // callbackURL: process.env.GOOGLE_CALLBACK,
     },
     function (accessToken, refreshToken, profile, cb) {
       User.findOne({ googleId: profile.id }, function (err, user) {
