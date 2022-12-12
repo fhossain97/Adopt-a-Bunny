@@ -1,6 +1,6 @@
 # Adopt-a-Bunny
 
-**Adopt-A-Bunny** is a animal-shelter inspired website where users are able to adopt rabbits. 
+**Adopt-A-Bunny** is a animal-shelter inspired website where users are able to adopt rabbits. Users can submit rabbits for adoption and be able to edit, delete, and update their rabbit's information. 
 
 ## User Stories
 
@@ -25,7 +25,7 @@ Further development ideas:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='/public/.AdoptABunny.gif.icloud' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='/public/adopt-a-bunny.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
