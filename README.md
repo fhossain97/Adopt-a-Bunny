@@ -32,6 +32,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Deployment
 
 Heroku Link: https://adopt-a-bunny.herokuapp.com/rabbits
+Fly Link : https://adopt-a-bunny.fly.dev/rabbits
 
 ## Challenges
 
