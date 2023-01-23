@@ -13,8 +13,10 @@
   <a href="/rabbits/<%= el._id %>">
     <div class="index">
       <img src="<%= el.images%>" /><br />
-      <%= el.name%><br />
-      Status: <%= el.status%><br />
+      <button class="showbunny">
+        <p class="title"><%= el.name%><br /></p>
+        <p>Status: <%= el.status%><br /></p>
+      </button>
     </div>
   </a>
 

@@ -17,7 +17,6 @@
         <a href="/rabbits">HOME</a>
         <a href="/rabbits/new">SUBMIT REQUEST</a>
         <% if (user) { %>
-          <p>Welcome <%{user.name}%> </p>
         <a class="active" href="/logout">LOG OUT</a>
         <% } else { %>
         <a class="active" href="/auth/google">GOOGLE LOGIN</a>
