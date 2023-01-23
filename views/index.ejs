@@ -7,7 +7,7 @@
   requests and get back to you
 </h3>
 
-<div class="parent">
+<!-- <div class="parent">
   <% allBunnies.forEach((el) => { %>
 
   <a href="/rabbits/<%= el._id %>">
@@ -21,5 +21,32 @@
   </a>
 
   <% }) %>
-</div>
+</div> -->
+
+<section class="wrapper">
+  <% allBunnies.forEach((el) => { %> 
+  <a class='parent' href="/rabbits/<%= el._id
+  %>">
+  <div class="card" data-effect="zoom">
+    <figure class="card__image">
+      <img
+        src="https://thumbs.dreamstime.com/b/pattern-cute-little-bunnies-hearts-blue-background-white-cartoon-rabbit-print-textile-wrapping-paper-vector-194034966.jpg"
+        alt=""
+      />
+    </figure>
+    <div class="card__header">
+      <figure class="card__profile">
+        <img src="<%= el.images%>" alt="" />
+      </figure>
+    </div>
+
+    <div class="card__body">
+      <h3 class="card__name"><%= el.name%></h3>
+      <p class="card__job"><%= el.status%></p>
+      <p class="card__bio">Click for more details!</p>
+    </div>
+  </div>
+  <% }) %>
+</section>
+
 <%- include('./partials/footer.ejs') %>
