@@ -29,11 +29,51 @@
   </body>
   <main> -->
 
-    <%- include('./partials/header.ejs') %>
+<%- include('./partials/header.ejs') %>
 
-<body class="show">
-  
-  <div class="showinfo">
+<main>
+  <div class="center">
+    <div class="carddiv">
+      <div class="additional">
+        <div class="user-card">
+          <div class="level center">Age: <%= bunny.age %></div>
+          <div class="points center">Status: <%= bunny.status %></div>
+
+          <img class="'showicon" src="<%= bunny.images %>" />
+          <div class="more-info">
+            <h1>Jane Doe</h1>
+            <div class="coords">
+              <span>Group Name</span>
+              <span>Joined January 2019</span>
+            </div>
+            <div class="coords">
+              <span><%= bunny.breed %></span>
+            </div>
+          </div>
+        </div>
+        <div class="general">
+          <h1 class="'showname"><%= bunny.name %></h1>
+          <p><%= bunny.description %></p>
+          <span class="more">Hover over for more information</span>
+        </div>
+      </div>
+
+      <div class="card green">
+        <div class="additional">
+          <div class="more-info">
+            <div class="stats">
+              <div>
+                <div class="title">Coffee</div>
+                <i class="fa fa-coffee"></i>
+                <div class="value infinity">∞</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="showinfo">
     <div class="innershow">
     <img src="<%= bunny.images %>" />
     <h3 class="showdetail"><%= bunny.name %></h3>
@@ -43,20 +83,9 @@
     <h3 class="showdetail">Breed: <%= bunny.breed %></h3>
     <h3 class="showdetail">Status: <%= bunny.status %></h3>
     <div>
-  </div>
+  </div> -->
 
-
-
-  
-
-
-
-
-
-
-
-
-  <!-- <form method="POST" action="/rabbits/<%= bunny._id%>?_method=PATCH">
+    <!-- <form method="POST" action="/rabbits/<%= bunny._id%>?_method=PATCH">
   
   
     <div><button type="button" class="button" data-toggle="modal" data-target="#exampleModal">
@@ -90,12 +119,7 @@
     </div>
   </div>
 </div> -->
-  
-
-
-</body>
-
-
-
+  </div>
+</main>
 
 <%- include('./partials/footer.ejs') %>

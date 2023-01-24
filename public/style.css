@@ -2,7 +2,7 @@
 
 html,
 .show {
-  background-color: cornsilk;
+  background-image: url("https://media02.stockfood.com/largepreviews/MzkzMTI1ODQ5/12681479-A-light-blue-background.jpg");
   font-family: Raleway;
 }
 
@@ -338,9 +338,10 @@ body {
   font-size: var(--fontLarge);
   font-weight: var(--fontLight);
   letter-spacing: 0.1rem;
+  color: white;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  background: -webkit-linear-gradient(darkblue, #a1a1a1);
+  background: -webkit-linear-gradient(white, #a1a1a1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transition: all var(--speed) ease;
@@ -348,7 +349,7 @@ body {
 }
 
 .card:hover .card__name {
-  background: -webkit-linear-gradient(white, #c1c1c1);
+  background: -webkit-linear-gradient(white, white);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -361,7 +362,7 @@ body {
   font-weight: var(--fontLight);
   text-align: center;
   letter-spacing: 0.2rem;
-  color: darkblue;
+  color: white;
   -webkit-transition: all var(--speed) ease;
   transition: all var(--speed) ease;
 }
@@ -380,7 +381,7 @@ body {
   font-size: var(--fontMedium);
   font-weight: var(--fontLight);
   text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.35);
-  color: darkblue;
+  color: white;
   opacity: 0;
   -webkit-transition: all var(--speed) ease;
   transition: all var(--speed) ease;
@@ -428,16 +429,14 @@ body {
 /* link for welcome styling -https://codepen.io/dfitzy/pen/VepqMq */
 
 #welcomecontainer {
-  border: solid 3px #474544;
-  border-radius: 30%;
   max-width: 80%;
-  height: 250px;
+  height: 120px;
   margin: 60px auto;
   position: relative;
 }
 
 .welcome {
-  color: #474544;
+  color: black;
   font-size: 32px;
   font-weight: 700;
   letter-spacing: 7px;
@@ -461,64 +460,209 @@ body {
   float: none;
 }
 
-.site-footer {
-  background-color: cornflowerblue;
-  padding: 45px 0 20px;
-  font-size: 15px;
-  line-height: 24px;
-  color: black;
+content {
+  width: 850px;
+  margin: auto;
+
+  padding: 100px 0;
 }
-.site-footer hr {
-  border-top-color: black;
-  opacity: 0.5;
+/* 
+link for footer styling- https://codepen.io/madshaakansson/pen/eYdVvr */
+.fixed_footer {
+  width: 100%;
+  height: 120px;
+  background: cornflowerblue;
+  text-align: center;
 }
-.site-footer hr.small {
-  margin: 20px 0;
-}
-.site-footer h6 {
-  color: black;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-top: 5px;
-  letter-spacing: 2px;
+.fixed_footer p,
+li {
+  color: white;
+  column-gap: 50px;
+  font-size: 1em;
+  font-weight: 300;
+  list-style-type: none;
 }
 
-.footer-links {
-  padding-left: 0;
-  list-style: none;
+hr {
+  height: 2px;
+
+  background-color: black;
 }
-.footer-links li {
+
+.copyright {
+  text-align: right;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.carddiv {
+  width: 450px;
+  height: 250px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;
+}
+
+.carddiv .showname {
+  text-align: center;
+}
+
+.carddiv .additional {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(#de685e, #ee786e);
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card.green .additional {
+  background: linear-gradient(#92bca6, #a2ccb6);
+}
+
+.carddiv:hover .additional {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.carddiv .additional .user-card {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.carddiv .additional .user-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -2px;
+  height: 80%;
+  border-left: 2px solid rgba(0, 0, 0, 0.025);
+}
+
+.carddiv .additional .user-card .level,
+.carddiv .additional .user-card .points {
+  top: 15%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.125rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.carddiv .additional .user-card .points {
+  top: 85%;
+}
+
+.carddiv .additional .user-card {
+  top: 50%;
+}
+
+.carddiv .additional .more-info {
+  width: 300px;
+  float: left;
+  position: absolute;
+  left: 150px;
+  height: 100%;
+}
+
+.carddiv .additional .more-info .showname {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.card.green .additional .more-info .showname {
+  color: #224c36;
+}
+
+.card .additional .coords {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card.green .additional .coords {
+  color: #325c46;
+}
+
+.carddiv .additional .coords span + span {
+  float: right;
+}
+
+.carddiv .additional .stats {
+  font-size: 2rem;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  top: auto;
+  color: #fff;
+}
+
+.card.green .additional .stats {
+  color: #325c46;
+}
+
+.carddiv .additional .stats > div {
+  flex: 1;
+  text-align: center;
+}
+
+.carddiv .additional .stats i {
   display: block;
 }
 
-.footer-links.inline li {
-  display: inline-block;
+.carddiv .additional .stats div.title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-.site-footer {
-  text-align: right;
+
+.carddiv .additional .stats div.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
 }
-.site-footer {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  margin-left: 6px;
-  margin-right: 0;
-  border-radius: 100%;
-  background-color: black;
+
+.carddiv .additional .stats div.value.infinity {
+  font-size: 2.5rem;
 }
-.copyright-text {
-  margin: 0;
+
+.carddiv .general {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
 }
-@media (max-width: 991px) {
-  .site-footer [class^="col-"] {
-    margin-bottom: 30px;
-  }
+
+.carddiv .general .more {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9em;
 }
-@media (max-width: 767px) {
-  .site-footer {
-    padding-bottom: 0;
-  }
-  .site-footer .copyright-text {
-    text-align: center;
-  }
+
+.showicon {
+  border-radius: 50%;
 }
