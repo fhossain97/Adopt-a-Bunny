@@ -5,6 +5,12 @@ html,
   background-image: url("https://media02.stockfood.com/largepreviews/MzkzMTI1ODQ5/12681479-A-light-blue-background.jpg");
   font-family: Raleway;
 }
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
 
 header {
   height: 500px;
@@ -13,7 +19,7 @@ header {
   background-image: url("./partials.jpg");
 }
 
-h1 {
+.header {
   animation: glow 30s ease-in-out infinite;
   margin: 0 auto;
   justify-self: left;
@@ -196,13 +202,6 @@ below styling is using this link -https://codepen.io/lamchang/pen/PQGQyR */
   }
 }
 
-* {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: var(--font);
   font-weight: var(--fontOrigin);
@@ -210,7 +209,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.005rem;
   -webkit-font-smoothing: subpixel-antialiased;
-  font-smoothing: subpixel-antialiased;
+  font-weight: subpixel-antialiased;
 }
 
 .wrapper {
@@ -334,23 +333,23 @@ body {
   align-self: center;
   justify-self: center;
   padding-bottom: 10px;
-  text-decoration: none;
+
   font-size: var(--fontLarge);
-  font-weight: var(--fontLight);
+  font-weight: bold;
   letter-spacing: 0.1rem;
-  color: white;
+
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  background: -webkit-linear-gradient(white, #a1a1a1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  -webkit-text-fill-color: white;
   -webkit-transition: all var(--speed) ease;
   transition: all var(--speed) ease;
 }
 
 .card:hover .card__name {
-  background: -webkit-linear-gradient(white, white);
-  -webkit-background-clip: text;
+  color: white;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -473,6 +472,10 @@ link for footer styling- https://codepen.io/madshaakansson/pen/eYdVvr */
   height: 120px;
   background: cornflowerblue;
   text-align: center;
+
+  position: fixed;
+
+  bottom: 0px;
 }
 .fixed_footer p,
 li {
@@ -493,26 +496,25 @@ hr {
   text-align: right;
 }
 
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-}
+/* link for card styling -https://codepen.io/alvaromontoro/pen/ebPEWb */
 
 .carddiv {
-  width: 450px;
-  height: 250px;
+  width: 480px;
+  height: 270px;
   background-color: #fff;
-  background: linear-gradient(#f8f8f8, #fff);
   box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   overflow: hidden;
   position: relative;
   margin: 1.5rem;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
-.carddiv .showname {
+.carddiv,
+.showname {
   text-align: center;
 }
 
@@ -520,14 +522,10 @@ hr {
   position: absolute;
   width: 150px;
   height: 100%;
-  background: linear-gradient(#de685e, #ee786e);
+  background: lightblue;
   transition: width 0.4s;
   overflow: hidden;
   z-index: 2;
-}
-
-.card.green .additional {
-  background: linear-gradient(#92bca6, #a2ccb6);
 }
 
 .carddiv:hover .additional {
@@ -569,7 +567,7 @@ hr {
   top: 85%;
 }
 
-.carddiv .additional .user-card {
+.carddiv .additional .user-card .svg {
   top: 50%;
 }
 
@@ -581,22 +579,26 @@ hr {
   height: 100%;
 }
 
-.carddiv .additional .more-info .showname {
+.carddiv .additional .more-info {
   color: #fff;
   margin-bottom: 0;
 }
 
-.card.green .additional .more-info .showname {
-  color: #224c36;
+.additional .more-info,
+.showname {
+  color: black;
+}
+h4 {
+  color: white;
 }
 
-.card .additional .coords {
+.carddiv .additional .coords {
   margin: 0 1rem;
   color: #fff;
   font-size: 1rem;
 }
 
-.card.green .additional .coords {
+.additional .coords {
   color: #325c46;
 }
 
@@ -615,7 +617,7 @@ hr {
   color: #fff;
 }
 
-.card.green .additional .stats {
+.additional .stats {
   color: #325c46;
 }
 
@@ -663,6 +665,69 @@ hr {
   font-size: 0.9em;
 }
 
-.showicon {
+.svg {
   border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* modal styling - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: lightblue; /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid cornflowerblue;
+  width: 80%;
+}
+
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modelbuttonopen {
+  margin: 0 auto;
+  display: block;
+}
+
+.readybtn {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.centerpage {
+  width: 100%;
+  text-align: center;
 }
