@@ -1,6 +1,6 @@
 # Adopt-a-Bunny
 
-**Adopt-A-Bunny** is a animal-shelter inspired website where users are able to adopt rabbits. Users can submit rabbits for adoption and be able to edit, delete, and update their rabbit's information. 
+**Adopt-A-Bunny** is a animal-shelter inspired website where users are able to adopt rabbits. Users can submit rabbits for adoption and be able to edit, delete, and update their rabbit's information.
 
 ## User Stories
 
@@ -25,15 +25,21 @@ Further development ideas:
 
 Here's a walkthrough of implemented user stories:
 
+- Original Project:
+
 <img src='/public/adopt-a-bunny.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+-Updated Project:
+
+<img src='/public/adopt-a-bunny2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Deployment
 
-Fly.io Link : https://adopt-a-bunny.fly.dev/rabbits
-Heroku Link: https://adopt-a-bunny.herokuapp.com/rabbits
+- Fly.io Link : https://adopt-a-bunny.fly.dev/rabbits
+- Heroku Link: https://adopt-a-bunny.herokuapp.com/rabbits
 
 ## Challenges
 
-Ensuring that the code was running smoothly as various components (oAuth, multer, etc.) were added into it. 
+Ensuring that the code was running smoothly as various components (oAuth, multer, etc.) were added into it.
