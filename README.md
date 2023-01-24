@@ -25,12 +25,6 @@ Further development ideas:
 
 Here's a walkthrough of implemented user stories:
 
-- Original Project:
-
-<img src='/public/adopt-a-bunny.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
--Updated Project:
-
 <img src='/public/adopt-a-bunny2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
