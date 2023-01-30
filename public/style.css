@@ -12,6 +12,24 @@ html,
   /* box-sizing: border-box; */
 }
 
+.svghead {
+  display: flex;
+  align-items: center;
+}
+
+.linkchild {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 1080px) {
+  .linkchild {
+    display: none;
+  }
+}
+
 header {
   height: 500px;
   text-align: center;
@@ -35,18 +53,19 @@ header {
 
 div.container {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
   margin: 0 auto;
   padding: 1.5em 4em;
-  text-align: right;
+  /* text-align: right; */
 }
 
 div.container a {
   color: #fff;
   text-decoration: none;
   font: 20px Raleway;
-  margin: 0px 10px;
-  padding: 10px 10px;
+  text-align: center;
+  padding: 10px;
   position: relative;
   z-index: 0;
   cursor: pointer;
@@ -60,7 +79,7 @@ div.borderYtoX a:before,
 div.borderYtoX a:after {
   position: absolute;
   opacity: 0.5;
-  height: 80%;
+  height: 100%;
   width: 2px;
   content: "";
   background: gold;
@@ -91,6 +110,96 @@ div.borderYtoX a:hover:after {
   to {
     text-shadow: 0 0 30px navy;
   }
+}
+
+/* link-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: lightblue;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 30px;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: black;
+}
+
+.sidenav #closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* link-https://codepen.io/designcouch/pen/ExvwPY */
+
+#nav-icon3 {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  /* z-index: 2; */
+}
+
+@media screen and (min-width: 1081px) {
+  #nav-icon3 {
+    display: none;
+  }
+}
+
+#nav-icon3 span {
+  display: block;
+
+  height: 5px;
+  width: 100%;
+  background: gold;
+  border-radius: 9px;
+  opacity: 1;
+
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 ul {
@@ -215,7 +324,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -477,7 +586,7 @@ link for footer styling- https://codepen.io/madshaakansson/pen/eYdVvr */
 .fixed_footer p,
 li {
   color: white;
-  column-gap: 50px;
+  /* column-gap: 50px; */
   font-size: 1em;
   font-weight: 300;
   list-style-type: none;
@@ -490,7 +599,7 @@ hr {
 }
 
 .copyright {
-  text-align: right;
+  text-align: center;
 }
 
 /* link for card styling -https://codepen.io/alvaromontoro/pen/ebPEWb */
