@@ -407,8 +407,8 @@ body {
   justify-self: center;
   display: block;
   overflow: hidden;
-  max-height: 180px;
-  max-width: 160px;
+  height: 160px;
+  width: 160px;
   border-radius: 50%;
 }
 
@@ -425,6 +425,18 @@ body {
   mix-blend-mode: normal;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+#Mushu img {
+  object-position: 80%;
+}
+
+#Simba img {
+  object-position: 0%;
+}
+
+#MoonMoon img {
+  object-position: 90%;
 }
 
 .card:hover .card__profile img {
@@ -537,8 +549,7 @@ body {
 
 #welcomecontainer {
   max-width: 80%;
-  height: 120px;
-  margin: 60px auto;
+  margin: 30px auto;
   position: relative;
 }
 
@@ -573,6 +584,16 @@ content {
 
   padding: 100px 0;
 }
+
+.flexparent {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.center {
+  flex-grow: 1;
+}
 /* 
 link for footer styling- https://codepen.io/madshaakansson/pen/eYdVvr */
 .fixed_footer {
@@ -580,8 +601,8 @@ link for footer styling- https://codepen.io/madshaakansson/pen/eYdVvr */
   height: 120px;
   background: cornflowerblue;
   text-align: center;
-  position: fixed;
-  bottom: 0px;
+  /* position: fixed; */
+  /* bottom: 0px; */
 }
 .fixed_footer p,
 li {
@@ -605,8 +626,8 @@ hr {
 /* link for card styling -https://codepen.io/alvaromontoro/pen/ebPEWb */
 
 .carddiv {
-  width: 480px;
-  height: 270px;
+  /* width: 480px;
+  height: 270px; */
   background-color: #fff;
   box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
   border-radius: 6px;
@@ -614,9 +635,13 @@ hr {
   position: relative;
   margin: 1.5rem;
   text-align: center;
-  display: inline-block;
   margin: 0 auto;
   margin-top: 10px;
+
+  height: max-content;
+  display: flex;
+  border: 2px solid red;
+  max-width: 500px;
 }
 
 .carddiv,
@@ -625,19 +650,21 @@ hr {
 }
 
 .carddiv .additional {
-  position: absolute;
-  width: 150px;
-  height: 100%;
+  /* position: absolute; */
+  /* width: 150px; */
+
   background: lightblue;
+
+  /* border: 1px solid blue;
   transition: width 0.4s;
   overflow: hidden;
-  z-index: 2;
+  z-index: 2; */
 }
 
-.carddiv:hover .additional {
+/* .carddiv:hover .additional {
   width: 100%;
   border-radius: 0 5px 5px 0;
-}
+} */
 
 .carddiv .additional .user-card {
   width: 150px;
@@ -677,12 +704,8 @@ hr {
   top: 50%;
 }
 
-.carddiv .additional .more-info {
-  width: 300px;
-  float: left;
-  position: absolute;
-  left: 150px;
-  height: 100%;
+.more-info {
+  display: none;
 }
 
 .carddiv .additional .more-info {
@@ -753,9 +776,8 @@ h4 {
 }
 
 .carddiv .general {
-  width: 300px;
   height: 100%;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   right: 0;
   z-index: 1;
@@ -765,7 +787,7 @@ h4 {
 }
 
 .carddiv .general .more {
-  position: absolute;
+  /* position: absolute; */
   bottom: 1rem;
   right: 1rem;
   font-size: 0.9em;
@@ -834,7 +856,7 @@ h4 {
   padding: 10px;
 }
 
-.centerpage {
+/* .centerpage {
   width: 100%;
   text-align: center;
-}
+} */
