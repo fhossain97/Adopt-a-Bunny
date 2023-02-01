@@ -1,13 +1,18 @@
 <%- include('./partials/header.ejs') %>
-<main>
-  <h1 class="new-header">Rabbit Adoption Submission</h1>
-  <h3>
-    As a shelter, we rely on our online community to send in any rabbits they
-    may have for adoption. Our staff will review each submission and make the
-    rabbits available for adoption. We thank each and every one of you for your
-    contribution to the shelter.
-  </h3>
 
+<div id="welcomecontainer">
+  <h1 class="welcome">&bull; Submission&bull;</h1>
+
+  <div>
+    <div class="message">
+      <h3 class="intro">
+        As a shelter, we rely on our online community to send in any rabbits
+        they may have for adoption. Our staff will review each submission and
+        make the rabbits available for adoption. We thank each and every one of
+        you for your contribution to the shelter.
+      </h3>
+    </div>
+  </div>
   <form enctype="multipart/form-data" action="/rabbits" method="POST">
     Name: <input name="name" type="text" /><br />
     Description: <input name="description" type="text" /><br />
@@ -23,5 +28,6 @@
       <input class="button" type="submit" value="Submit" />
     </div>
   </form>
-</main>
+</div>
+
 <%- include('./partials/footer.ejs') %>
